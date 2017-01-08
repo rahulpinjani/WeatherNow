@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "WNWeatherModel.h"
 @interface ViewController ()
 
 @end
@@ -17,8 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    _loObject = [[WNServiceController alloc]init];
+    [_loObject fetchData];
+    
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

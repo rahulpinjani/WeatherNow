@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "WNServiceController.h"
 @interface ViewController : UIViewController
-
-
+@property (nonatomic,strong) WNServiceController *loObject;
 @end
 
