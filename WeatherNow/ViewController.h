@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "WNServiceController.h"
-@interface ViewController : UIViewController
+#import "WNSingleton.h"
+
+@interface ViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+
 @property (nonatomic,strong) WNServiceController *loObject;
+
 @end
 

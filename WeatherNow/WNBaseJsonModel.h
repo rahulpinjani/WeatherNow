@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "JSONModel.h"
 @interface WNBaseJsonModel : JSONModel
+
 @property (nonatomic,assign) NSArray *weather;
 @property (nonatomic,assign)NSNumber <Optional> *tempMin;
 @property (nonatomic,assign)NSNumber<Optional> *tempMax;

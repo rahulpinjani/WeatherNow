@@ -10,8 +10,10 @@
 #import "JSONModel.h"
 
 @interface WNWeatherModel : JSONModel
+
 @property (nonatomic,assign)NSNumber *tempMin;
 @property (nonatomic,assign)NSNumber *tempMax;
 @property (nonatomic,assign)NSNumber *pressure;
 @property(nonatomic,strong)NSString *weatherIcon;
+
 @end

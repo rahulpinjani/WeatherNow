@@ -21,6 +21,9 @@
 		FAAF04831E21EC03006C0B59 /* WNBaseJsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAF04821E21EC03006C0B59 /* WNBaseJsonModel.m */; };
 		FAAF04871E21F55A006C0B59 /* WNServiceController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAF04861E21F55A006C0B59 /* WNServiceController.m */; };
 		FAAF048A1E21F82E006C0B59 /* WNWeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAF04891E21F82E006C0B59 /* WNWeatherModel.m */; };
+		FAC941C61E2308CF00316437 /* WNConstants.h in Sources */ = {isa = PBXBuildFile; fileRef = FAC941C51E22FC1000316437 /* WNConstants.h */; };
+		FAC941CA1E236AFB00316437 /* WNSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC941C91E236AFB00316437 /* WNSingleton.m */; };
+		FAC941CD1E23934100316437 /* WNPopUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC941CC1E23934100316437 /* WNPopUpViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +75,11 @@
 		FAAF04861E21F55A006C0B59 /* WNServiceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNServiceController.m; sourceTree = "<group>"; };
 		FAAF04881E21F82E006C0B59 /* WNWeatherModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNWeatherModel.h; sourceTree = "<group>"; };
 		FAAF04891E21F82E006C0B59 /* WNWeatherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNWeatherModel.m; sourceTree = "<group>"; };
+		FAC941C51E22FC1000316437 /* WNConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WNConstants.h; path = ../WNConstants.h; sourceTree = "<group>"; };
+		FAC941C81E236AFB00316437 /* WNSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNSingleton.h; sourceTree = "<group>"; };
+		FAC941C91E236AFB00316437 /* WNSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNSingleton.m; sourceTree = "<group>"; };
+		FAC941CB1E23934100316437 /* WNPopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNPopUpViewController.h; sourceTree = "<group>"; };
+		FAC941CC1E23934100316437 /* WNPopUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNPopUpViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +136,7 @@
 		FAAF04411E21EA54006C0B59 = {
 			isa = PBXGroup;
 			children = (
+				FAC941C71E236ABB00316437 /* Singleton */,
 				FAAF044C1E21EA54006C0B59 /* WeatherNow */,
 				FAAF04661E21EA54006C0B59 /* WeatherNowTests */,
 				FAAF04711E21EA54006C0B59 /* WeatherNowUITests */,
@@ -150,12 +159,12 @@
 		FAAF044C1E21EA54006C0B59 /* WeatherNow */ = {
 			isa = PBXGroup;
 			children = (
+				FAC941C41E22EE8700316437 /* Views */,
 				FAAF04841E21F51E006C0B59 /* Controller */,
 				FAAF04801E21EBEB006C0B59 /* Models */,
 				FAAF04501E21EA54006C0B59 /* AppDelegate.h */,
 				FAAF04511E21EA54006C0B59 /* AppDelegate.m */,
-				FAAF04531E21EA54006C0B59 /* ViewController.h */,
-				FAAF04541E21EA54006C0B59 /* ViewController.m */,
+				FAC941C51E22FC1000316437 /* WNConstants.h */,
 				FAAF04561E21EA54006C0B59 /* Main.storyboard */,
 				FAAF04591E21EA54006C0B59 /* Assets.xcassets */,
 				FAAF045B1E21EA54006C0B59 /* LaunchScreen.storyboard */,
@@ -209,6 +218,26 @@
 				FAAF04861E21F55A006C0B59 /* WNServiceController.m */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		FAC941C41E22EE8700316437 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FAAF04531E21EA54006C0B59 /* ViewController.h */,
+				FAAF04541E21EA54006C0B59 /* ViewController.m */,
+				FAC941CB1E23934100316437 /* WNPopUpViewController.h */,
+				FAC941CC1E23934100316437 /* WNPopUpViewController.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		FAC941C71E236ABB00316437 /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				FAC941C81E236AFB00316437 /* WNSingleton.h */,
+				FAC941C91E236AFB00316437 /* WNSingleton.m */,
+			);
+			name = Singleton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -491,7 +520,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAC941CA1E236AFB00316437 /* WNSingleton.m in Sources */,
+				FAC941C61E2308CF00316437 /* WNConstants.h in Sources */,
 				FAAF04551E21EA54006C0B59 /* ViewController.m in Sources */,
+				FAC941CD1E23934100316437 /* WNPopUpViewController.m in Sources */,
 				FAAF048A1E21F82E006C0B59 /* WNWeatherModel.m in Sources */,
 				FAAF04871E21F55A006C0B59 /* WNServiceController.m in Sources */,
 				FAAF04521E21EA54006C0B59 /* AppDelegate.m in Sources */,

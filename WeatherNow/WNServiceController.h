@@ -10,6 +10,8 @@
 #import "WNBaseJsonModel.h"
 #import "WNWeatherModel.h"
 @interface WNServiceController : NSObject
+
 @property (strong, nonatomic) WNBaseJsonModel* weatherModel;
 -(WNWeatherModel *)fetchData;
+
 @end
